@@ -1,0 +1,5 @@
+
+
+Thread is used  to perform multitasks on the browsers and in any operating systems.
+thread is exists in 5-6 existing types - New, Runnable, Blocked, Waiting,Timed Waiting
+Terminated etc.
