@@ -1,0 +1,44 @@
+
+mysql> select * from student; select * from course; select * from student_course;
++------+--------+------------+------------+-------+
+| S_id | S_name | S_Address  | S_phone    | S_age |
++------+--------+------------+------------+-------+
+| S1   | Ram    | Delhi      | 8878763116 |    18 |
+| S2   | Ramesh | Gurgaon    | 8878883116 |    18 |
+| S3   | Sujit  | Chandigarh | 8878882216 |    20 |
+| S4   | Suresh | Delhi      | 9978882216 |    18 |
+| S5   | Ratan  | Delhi      | 9977282216 |    20 |
++------+--------+------------+------------+-------+
+5 rows in set (0.00 sec)
+
++------+--------+
+| C_id | C_name |
++------+--------+
+| C1   | DSA    |
+| C2   | JAVA   |
+| C3   | MERN   |
++------+--------+
+3 rows in set (0.02 sec)
+
++------+------+
+| S_id | C_id |
++------+------+
+| S1   | C1   |
+| S1   | C3   |
+| S2   | C1   |
+| S3   | C2   |
+| S4   | C2   |
+| S4   | C3   |
+| S5   | C2   |
++------+------+
+7 rows in set (0.00 sec)
+
+
+select student.S_id,S_name,S_address,S_phone,S_age from student right join student_course on
+student.S_id=student_course.S_id and student_course.C_id="C2" where student.S_address="Delhi";
++------+--------+-----------+------------+-------+
+| S_id | S_name | S_address | S_phone    | S_age |
++------+--------+-----------+------------+-------+
+| S4   | Suresh | Delhi     | 9978882216 |    18 |
+| S5   | Ratan  | Delhi     | 9977282216 |    20 |
++------+--------+-----------+------------+-------+

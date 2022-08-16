@@ -1,0 +1,24 @@
+mysql> select * from person; select * from address;
++------+----------+-----------+
+| pid  | lastname | firstname |
++------+----------+-----------+
+|    1 | Wang     | Allen     |
+|    2 | Alice    | Bob       |
++------+----------+-----------+
+2 rows in set (0.00 sec)
+
++------+------+---------------+------------+
+| aid  | pid  | city          | state      |
++------+------+---------------+------------+
+|    1 |    2 | New York City | New York   |
+|    2 |    3 | San Diego     | California |
++------+------+---------------+------------+
+2 rows in set (0.00 sec)
+
+select firstname,lastname,city,state from person left join address on person.pid=address.pid;
++-----------+----------+---------------+----------+
+| firstname | lastname | city          | state    |
++-----------+----------+---------------+----------+
+| Allen     | Wang     | NULL          | NULL     |
+| Bob       | Alice    | New York City | New York |
++-----------+----------+---------------+----------+
