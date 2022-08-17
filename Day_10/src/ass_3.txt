@@ -1,0 +1,24 @@
+
+
++-------+-----------+---------+
+| name  | AC_number | balance |
++-------+-----------+---------+
+| Ram   | ac-12123  |   50000 |
+| John  | ac-w4123  |   60000 |
+| David | ac-23134  |   10000 |
++-------+-----------+---------+
+
+
+ start transaction;
+ update bank set balance=balance-10000 where name="John";
+ update bank set balance=balance+10000 where name="David";
+ commit;
+
+
+ +-------+-----------+---------+
+ | name  | AC_number | balance |
+ +-------+-----------+---------+
+ | Ram   | ac-12123  |   50000 |
+ | John  | ac-w4123  |   50000 |
+ | David | ac-23134  |   20000 |
+ +-------+-----------+---------+

@@ -1,0 +1,8 @@
+
+
+
+transaction in java ,as it refer to a series of action where all action should be done completely
+otherwise no action taken or changes should be happened in database.
+
+transaction may involve in one or more resources like database and giving ways to perform many tasks
+in transaction and multiple resource are involved in global transaction.
