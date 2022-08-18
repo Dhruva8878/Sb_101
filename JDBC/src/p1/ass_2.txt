@@ -1,0 +1,11 @@
+
+step-1 we have to load the library of the JDBC in our program.
+step 2 right click on the folder.
+step-3 then we have to choose the option of build path.
+step-4 in the build path we have the option configure library.
+step-5 add external files then library added in the program.
+
+
+then with help of Class.forname(), Connection ,DriverMaanager are there
+some method with the help of these we can make connection between
+our database and java.  
