@@ -1,0 +1,29 @@
+
+Q.1)
+
+select email from person group by email having count(email)>1;
++---------+
+| email   |
++---------+
+| a@b.com |
++---------+---------------+---------------------+-----------------------+----------------------------
+Q.2)
+1)
+ select max(salary) from worker where salary<(select max(salary) from worker);
+2)
+ select * from worker where salary<(select max(salary) from worker) limit 5;
+3)
+select * from worker where mod(worker_id,2)=0;
+4)
+select department ,count(department) from worker group by department order by department desc;
+5)
+
++---------+---------------+---------------------+-----------------------+----------------------------
+Q.3)
+1)
+ select * from employeedetail where fullname like "hn%";
+2)
+ select employeedetail.empid,employeedetail.fullname,employeedetail.city from
+ employeedetail left join employeesalary on employeedetail.empid=employeesalary.empid;
+
+ 3)
